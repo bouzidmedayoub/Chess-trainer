@@ -1,0 +1,171 @@
+.openingPage {
+    max-width: 1400px;
+    margin: 0 auto;
+    animation: fadeIn 0.4s ease;
+}
+
+/* ===== HEADER ===== */
+.pageHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+    flex-wrap: wrap;
+}
+
+.headerLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.pageTitle {
+    font-size: var(--font-2xl);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.pageMeta {
+    font-size: var(--font-sm);
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.backLink {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: 10px 20px;
+    border-radius: var(--radius-md);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: var(--font-sm);
+    font-family: var(--font-family);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    text-decoration: none;
+}
+
+.backLink:hover {
+    background: var(--bg-card-hover);
+    color: var(--text-primary);
+}
+
+/* ===== PROGRESS ===== */
+.progressBar {
+    width: 100%;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: var(--space-md);
+}
+
+.progressFill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-primary-hover));
+    border-radius: 3px;
+    transition: width 0.4s ease;
+}
+
+/* ===== TWO-COLUMN LAYOUT ===== */
+.trainingLayout {
+    display: flex;
+    gap: var(--space-xl);
+    align-items: flex-start;
+    margin-top: var(--space-lg);
+}
+
+/* Left: board takes ~65-70% */
+.boardColumn {
+    flex: 7;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    align-items: center;
+}
+
+.boardWithEval {
+    display: flex;
+    gap: var(--space-sm);
+    align-items: stretch;
+    width: 100%;
+    justify-content: center;
+}
+
+.boardWrapper {
+    border-radius: var(--radius-md);
+    overflow: visible;
+    transition: box-shadow 0.4s ease;
+}
+
+.boardCorrect {
+    animation: correctFlash 0.6s ease;
+}
+
+.boardIncorrect {
+    animation: incorrectShake 0.3s ease;
+}
+
+/* Right panel: ~30-35% */
+.sidePanel {
+    flex: 3;
+    min-width: 260px;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+/* Line selector sits above the board on left */
+.selectorColumn {
+    width: 100%;
+    flex-shrink: 0;
+    margin-bottom: var(--space-md);
+}
+
+.selectPrompt {
+    text-align: center;
+    padding: var(--space-3xl) var(--space-xl);
+    color: var(--text-muted);
+    font-size: var(--font-lg);
+    flex: 1;
+}
+
+.selectPromptIcon {
+    display: block;
+    font-size: 3rem;
+    margin-bottom: var(--space-lg);
+    opacity: 0.4;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media (max-width: 1100px) {
+    .trainingLayout {
+        flex-direction: column;
+    }
+
+    .sidePanel {
+        max-width: 100%;
+        min-width: 100%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .pageTitle {
+        font-size: var(--font-xl);
+    }
+
+    .pageHeader {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

@@ -1,0 +1,52 @@
+/* ===== EVALUATION BAR ===== */
+
+.evalBar {
+    width: 32px;
+    min-height: 420px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--border-color);
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.evalBarInner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #f0f0f0;
+    transition: height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.evalBarDark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #1a1a1a;
+    transition: height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.evalLabel {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 9px;
+    font-weight: 700;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.evalLabelTop {
+    composes: evalLabel;
+    top: 4px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.evalLabelBottom {
+    composes: evalLabel;
+    bottom: 4px;
+    color: rgba(0, 0, 0, 0.5);
+}

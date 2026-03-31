@@ -1,0 +1,169 @@
+.repertoirePage {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.repertoireHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+    flex-wrap: wrap;
+}
+
+.repertoireTitle {
+    font-size: var(--font-2xl);
+    font-weight: 700;
+}
+
+.searchInput {
+    padding: 10px 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    font-family: var(--font-family);
+    font-size: var(--font-sm);
+    min-width: 260px;
+    transition: border-color var(--transition-fast);
+}
+
+.searchInput::placeholder {
+    color: var(--text-muted);
+}
+
+.searchInput:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 3px var(--accent-primary-glow);
+}
+
+/* Category */
+.category {
+    margin-bottom: var(--space-xl);
+}
+
+.categoryTitle {
+    font-size: var(--font-lg);
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-md);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.categoryCount {
+    font-size: var(--font-xs);
+    padding: 2px 8px;
+    background: var(--bg-card);
+    border-radius: 999px;
+    color: var(--text-muted);
+}
+
+/* Opening Cards Grid */
+.cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-md);
+}
+
+/* Opening Card */
+.openingCard {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all var(--transition-base);
+}
+
+.openingCard:hover {
+    border-color: var(--border-color-hover);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.cardHeader {
+    padding: var(--space-md) var(--space-lg);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-sm);
+    cursor: pointer;
+}
+
+.cardInfo {
+    flex: 1;
+}
+
+.cardName {
+    font-size: var(--font-base);
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.cardMeta {
+    display: flex;
+    gap: var(--space-sm);
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cardToggle {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border-color);
+    background: transparent;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all var(--transition-fast);
+    flex-shrink: 0;
+}
+
+.cardToggle:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.cardToggleOpen {
+    composes: cardToggle;
+    transform: rotate(180deg);
+}
+
+.cardMoves {
+    padding: 0 var(--space-lg) var(--space-md);
+    border-top: 1px solid var(--border-color);
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.moveLine {
+    display: flex;
+    gap: var(--space-sm);
+    padding: 4px 0;
+    font-size: var(--font-sm);
+    font-family: 'Inter', monospace;
+    color: var(--text-secondary);
+}
+
+.moveNum {
+    color: var(--text-muted);
+    width: 24px;
+    flex-shrink: 0;
+}
+
+.addBtn {
+    margin-top: var(--space-sm);
+    padding: 6px 14px;
+    font-size: var(--font-xs);
+}
+
+.emptyState {
+    text-align: center;
+    padding: var(--space-2xl);
+    color: var(--text-muted);
+}

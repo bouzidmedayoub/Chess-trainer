@@ -71,7 +71,7 @@ A modern, interactive web application for mastering chess openings through space
 
 ```bash
 # Clone the repository
-git clone https://github.com/bouzidmedayoub/chess-trainer.git
+git clone https://github.com/<your-username>/chess-trainer.git
 cd chess-trainer
 
 # Install dependencies

@@ -1,0 +1,209 @@
+.statsPage {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.statsTitle {
+    font-size: var(--font-2xl);
+    font-weight: 700;
+    margin-bottom: var(--space-lg);
+}
+
+/* Summary Cards */
+.summaryGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+}
+
+.summaryCard {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    text-align: center;
+}
+
+.summaryValue {
+    font-size: var(--font-3xl);
+    font-weight: 700;
+    color: var(--accent-primary);
+    line-height: 1;
+    margin-bottom: var(--space-xs);
+}
+
+.summaryLabel {
+    font-size: var(--font-sm);
+    color: var(--text-secondary);
+}
+
+/* Accuracy Ring */
+.accuracySection {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xl);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+}
+
+.accuracyRing {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+}
+
+.accuracyRing svg {
+    transform: rotate(-90deg);
+}
+
+.accuracyPercent {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-xl);
+    font-weight: 700;
+    color: var(--accent-primary);
+}
+
+.accuracyDetails h3 {
+    font-size: var(--font-lg);
+    margin-bottom: var(--space-sm);
+}
+
+.accuracyDetails p {
+    color: var(--text-secondary);
+    font-size: var(--font-sm);
+}
+
+/* Per-Opening Bars */
+.openingBarsSection {
+    margin-bottom: var(--space-xl);
+}
+
+.sectionTitle {
+    font-size: var(--font-lg);
+    font-weight: 600;
+    margin-bottom: var(--space-md);
+}
+
+.openingBar {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.openingBar:last-child {
+    border-bottom: none;
+}
+
+.barName {
+    width: 200px;
+    font-size: var(--font-sm);
+    color: var(--text-primary);
+    flex-shrink: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.barTrack {
+    flex: 1;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.barFill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.6s ease;
+}
+
+.barFillGood {
+    background: var(--accent-success);
+}
+
+.barFillMid {
+    background: var(--accent-primary);
+}
+
+.barFillLow {
+    background: var(--accent-error);
+}
+
+.barPercent {
+    width: 45px;
+    text-align: right;
+    font-size: var(--font-sm);
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+/* Sessions */
+.sessionsSection {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+}
+
+.sessionRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: var(--font-sm);
+}
+
+.sessionRow:last-child {
+    border-bottom: none;
+}
+
+.sessionName {
+    color: var(--text-primary);
+}
+
+.sessionAccuracy {
+    font-weight: 600;
+}
+
+.sessionDate {
+    color: var(--text-muted);
+    font-size: var(--font-xs);
+}
+
+.emptyState {
+    text-align: center;
+    padding: var(--space-2xl);
+    color: var(--text-muted);
+}
+
+.clearBtn {
+    margin-top: var(--space-lg);
+}
+
+@media (max-width: 640px) {
+    .summaryGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .accuracySection {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .barName {
+        width: 120px;
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "openings": [
+    {
+      "id": "catalan",
+      "name": "Catalan Opening",
+      "pgn": "1. d4 d5 2. c4 e6 3. Nf3 c6 4. Nc3 Nf6 5. g3 Nbd7 6. Bg2 Be7 7. Qd3 O-O 8. Bg5 h6 9. Bd2"
+    },
+    {
+      "id": "slav",
+      "name": "Slav Defense",
+      "pgn": "1. d4 d5 2. c4 c6 3. cxd5 cxd5 4. Nc3 Nc6 5. e4 dxe4 6. d5 Ne5 7. Qa4+ Bd7 8. Qxe4 Ng6 9. Bc4 Nf6 10. Qe2 Rc8 11. Nf3 Qc7 12. Bb3 Nf4 13. Bxf4 Qxf4"
+    },
+    {
+      "id": "slav-czech-dutch",
+      "name": "Slav Defense – Czech Variation, Dutch Variation 2",
+      "pgn": "1. d4 Nf6 2. c4 c6 3. Nf3 d5 4. Nc3 dxc4 5. a4 Bf5 6. e3 e6 7. Bxc4 Bb4 8. O-O Nbd7 9. Qe2 O-O 10. e4 Bg4 11. e5 Nd5"
+    }
+  ]
+}

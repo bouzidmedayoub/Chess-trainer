@@ -1,0 +1,137 @@
+.settingsPage {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.settingsTitle {
+    font-size: var(--font-2xl);
+    font-weight: 700;
+    margin-bottom: var(--space-lg);
+}
+
+.settingsSection {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-md);
+}
+
+.sectionTitle {
+    font-size: var(--font-base);
+    font-weight: 600;
+    margin-bottom: var(--space-md);
+    color: var(--text-primary);
+}
+
+.settingRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.settingRow:last-child {
+    border-bottom: none;
+}
+
+.settingLabel {
+    font-size: var(--font-sm);
+    color: var(--text-primary);
+}
+
+.settingDesc {
+    font-size: var(--font-xs);
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+/* Toggle Switch */
+.toggle {
+    width: 48px;
+    height: 26px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 13px;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    transition: background var(--transition-fast);
+    flex-shrink: 0;
+}
+
+.toggle::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    transition: transform var(--transition-fast);
+}
+
+.toggleOn {
+    composes: toggle;
+    background: var(--accent-primary);
+}
+
+.toggleOn::after {
+    transform: translateX(22px);
+}
+
+/* Slider */
+.slider {
+    -webkit-appearance: none;
+    width: 160px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    background: var(--accent-primary);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.sliderValue {
+    font-size: var(--font-sm);
+    color: var(--text-secondary);
+    margin-left: var(--space-sm);
+    min-width: 30px;
+}
+
+.sliderGroup {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+/* Danger Zone */
+.dangerSection {
+    composes: settingsSection;
+    border-color: rgba(248, 113, 113, 0.2);
+}
+
+.dangerBtn {
+    padding: 10px 20px;
+    background: var(--accent-error-bg);
+    color: var(--accent-error);
+    border: 1px solid rgba(248, 113, 113, 0.2);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-size: var(--font-sm);
+    font-weight: 500;
+    transition: all var(--transition-fast);
+}
+
+.dangerBtn:hover {
+    background: rgba(248, 113, 113, 0.2);
+}

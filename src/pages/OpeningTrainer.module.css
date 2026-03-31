@@ -1,0 +1,211 @@
+.trainerPage {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.trainerHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+    flex-wrap: wrap;
+}
+
+.openingTitle {
+    font-size: var(--font-xl);
+    font-weight: 700;
+}
+
+.openingMeta {
+    font-size: var(--font-sm);
+    color: var(--text-secondary);
+    margin-top: 2px;
+}
+
+.selectorGroup {
+    display: flex;
+    gap: var(--space-sm);
+    align-items: center;
+}
+
+.selectDropdown {
+    padding: 10px 14px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    font-family: var(--font-family);
+    font-size: var(--font-sm);
+    cursor: pointer;
+    min-width: 220px;
+    transition: border-color var(--transition-fast);
+}
+
+.selectDropdown:hover,
+.selectDropdown:focus {
+    border-color: var(--border-color-hover);
+    outline: none;
+}
+
+.selectDropdown option {
+    background: var(--bg-secondary);
+}
+
+/* ===== MAIN TRAINER LAYOUT ===== */
+
+.trainerLayout {
+    display: flex;
+    gap: var(--space-lg);
+    align-items: flex-start;
+}
+
+.boardColumn {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    align-items: center;
+}
+
+.boardWithEval {
+    display: flex;
+    gap: var(--space-sm);
+    align-items: stretch;
+}
+
+.boardWrapper {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    transition: box-shadow 0.4s ease;
+}
+
+.boardCorrect {
+    animation: correctFlash 0.6s ease;
+}
+
+.boardIncorrect {
+    animation: incorrectShake 0.3s ease;
+}
+
+.sidePanel {
+    flex: 1;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+/* ===== FEEDBACK ===== */
+
+.feedback {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: 12px var(--space-md);
+    border-radius: var(--radius-md);
+    font-size: var(--font-sm);
+    font-weight: 500;
+    animation: fadeIn 0.3s ease;
+}
+
+.feedbackCorrect {
+    composes: feedback;
+    background: var(--accent-success-bg);
+    color: var(--accent-success);
+    border: 1px solid rgba(74, 222, 128, 0.2);
+}
+
+.feedbackIncorrect {
+    composes: feedback;
+    background: var(--accent-error-bg);
+    color: var(--accent-error);
+    border: 1px solid rgba(248, 113, 113, 0.2);
+}
+
+.feedbackHint {
+    composes: feedback;
+    background: var(--accent-info-bg);
+    color: var(--accent-info);
+    border: 1px solid rgba(96, 165, 250, 0.2);
+}
+
+.feedbackComplete {
+    composes: feedback;
+    background: var(--accent-primary-glow);
+    color: var(--accent-primary);
+    border: 1px solid rgba(201, 168, 76, 0.2);
+    font-size: var(--font-base);
+    justify-content: center;
+}
+
+/* ===== PROGRESS ===== */
+
+.progressBar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progressFill {
+    height: 100%;
+    background: var(--accent-primary);
+    border-radius: 3px;
+    transition: width 0.4s ease;
+}
+
+/* ===== TIMER ===== */
+
+.timerBar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 4px;
+    overflow: visible;
+    margin-top: var(--space-sm);
+    position: relative;
+}
+
+.timerFill {
+    height: 100%;
+    background: var(--accent-primary);
+    border-radius: 4px;
+    transition: width 1s linear, background-color 0.3s ease;
+}
+
+.timerUrgent {
+    background: var(--accent-error);
+}
+
+.timerLabel {
+    position: absolute;
+    right: 0;
+    top: -20px;
+    font-size: var(--font-xs);
+    color: var(--text-muted);
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 800px) {
+    .trainerLayout {
+        flex-direction: column;
+    }
+
+    .sidePanel {
+        min-width: 100%;
+    }
+
+    .trainerHeader {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .selectDropdown {
+        width: 100%;
+    }
+}
